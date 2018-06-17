@@ -139,6 +139,24 @@ nav.navbar.navbar-default.navbar-fixed-top.top-nav-collapse {
 }
 
 /*-- //header --*/
+/* contact us */
+
+.contact-us-head {
+  font-size: 55px;
+  color: rgb(3, 3, 3);
+  font-weight: 600;
+  font-family: 'Teko', sans-serif;
+  margin-bottom: 10px
+}
+
+.contact-us-margin {
+  margin-top: 20px
+}
+.contact-us-row{
+  margin-top: 200px
+}
+
+/* contact us ends */
 
 /*-- banner-text--*/
 
@@ -607,9 +625,7 @@ ul.pagination {
     left: 18%;
     top: -6%;
   }
-  .footer-agile {
-    margin-top: 2em;
-  }
+ 
   .copy-w3lsright p {
     letter-spacing: 1px;
   }
@@ -686,7 +702,7 @@ ul.pagination {
     border-radius: 0px;
   }
   .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-    background-color: #eb3751;
+    background-color: #030303;
   }
   .navbar-default .navbar-collapse, .navbar-default .navbar-form {
     border-color: #e7e7e7;
@@ -728,6 +744,12 @@ ul.pagination {
   }
   .agile_signup_form h2 {
     font-size: 1.5em;
+  }
+  .contact-us-head {
+    font-size: 35px;
+  }
+  .contact-us-row{
+    margin-top: 100px
   }
 }
 
@@ -1324,7 +1346,7 @@ canvas {
 
 @media (max-width:600px) {
   .about-us-couple {
-    margin-top: 100px;
+    margin-top: 5px;
     margin-bottom: 40px;
     margin-left: 10px;
     margin-right: 10px
@@ -1343,19 +1365,7 @@ canvas {
   }
 }
 
-/* contact us */
 
-.contact-us-head {
-  font-size: 55px;
-  color: rgb(3, 3, 3);
-  font-weight: 600;
-  font-family: 'Teko', sans-serif;
-  margin-bottom: 10px
-}
-
-.contact-us-margin {
-  margin-top: 20px
-}
 
 /*-- footer start here --*/
 
