@@ -1665,7 +1665,8 @@ input[type="submit"], a {
 		line-height: 30px;
 	}
 	.owl-pagination {
-		left: 44%;
+		left: 30%;
+		top: 110%;
 	}
 	.agileinfo_stats.mid-w3l-stat:after, .agileinfo_stats.mid-w3l-stat:after {
 		width: 20%;
@@ -1813,12 +1814,17 @@ input[type="submit"], a {
 	.banner-text h2 {
 		font-size: 30px;
 	}
+	.owl-pagination {
+		left: 15%;
+		top: 110%;
+	}
 }
 @media(max-width: 480px){
 
 	.about-top-grids p {
 		bottom:160px;
 	}
+	
 	.travel h3 {
 		margin: 0 1em;
 	}
@@ -1889,6 +1895,10 @@ input[type="submit"], a {
 		margin: 10px auto 0;
 		padding-left: 5px;
 	}
+	.owl-pagination {
+		left: 20%;
+		top: 110%;
+	}
 }
 @media(max-width:414px){
 	h1 a.navbar-brand {
@@ -1917,6 +1927,10 @@ input[type="submit"], a {
 	}
 }
 @media(max-width:384px){
+	.owl-pagination {
+		left: 3%;
+		top: 110%;
+	}
 	.middle-img {
 		width: 100%;
 	}
