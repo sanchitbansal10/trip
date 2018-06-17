@@ -1,0 +1,110 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+    title Document
+    // bootstrap-css
+    
+    // bootstrap-css
+    link(href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css' rel='stylesheet')
+    link(href='/stylesheets/style1.css', rel='stylesheet', type='text/css', media='all')
+    link(rel='stylesheet', href='/stylesheets/font-awesome.min.css')
+  body
+    include header.pug
+    #packages.packages
+      div(class='container' style={color:black})
+        .wthree_head_section
+          h3.title(style="font-family: 'Open Sans', sans-serif; margin-top:0px") PACKAGES
+        .packages_grids
+          .packages_grid1#package-list
+            
+                
+
+            // the side filter stuff
+
+            .container(style="margin-top:100px")      
+              .row
+                .col-md-3
+                    #col-md-3
+                        
+                        .list-group.panel
+                            input.search(type='text', placeholder='Search Packages' style::placeholder='color:white').list-group-item.list-group-item.strong.text-center(style='background: #444444; color: white;width:100%')  
+                            a.list-group-item.list-group-item.strong.text-center(style='background: #444444; color: white;' data-toggle='collapse')  Personalize Your Search
+                            a.list-group-item.list-group-item-success.strong(href='#demo1' style='background: #f7f7f7;' data-toggle='collapse' data-parent='#MainMenu')
+                                i.fa.fa-photo(style="font-weight:600;text-decoration:'none';color:black") Sort
+                                i.fa.fa-caret-down
+                            #demo1.list-group-submenu   
+                                a(class="sort list-group-item" data-sort="price") Sort by Price 
+                                div   
+                                    a(class="sort list-group-item" data-sort="popularity") Sort by Popularity
+                                div   
+                                    a(class="sort list-group-item" data-sort="duration") Sort by Duration
+                            a.list-group-item.list-group-item.strong(href='#demo2' style='background: #f7f7f7;' data-toggle='collapse' data-parent='#MainMenu')
+                                i.fa.fa-book(style="font-weight:600;text-decoration:'none'") Hotel type 
+                                i.fa.fa-caret-down
+                            #demo2.collapse.list-group-submenu
+                                a.list-group-item
+                                    input.filter(type='radio', value=5, name='hotelRating')
+                                    |  5 star
+                                a.list-group-item
+                                    input.filter(type='radio', value=4, name='hotelRating')
+                                    |  4 star
+                                a.list-group-item
+                                    input.filter(type='radio', value=3, name='hotelRating')
+                                    |  3 star
+                                a.list-group-item
+                                    input.filter(type='radio', value=2, name='hotelRating')
+                                    |  2 star
+                                a.list-group-item
+                                    input.filter(type='radio', value=1, name='hotelRating')
+                                    |  1 star
+                            a.list-group-item.list-group-item.strong(href='#demo4' style='background: #f7f7f7;' data-toggle='collapse' data-parent='#MainMenu')
+                                i.fa.fa-language(style="font-weight:600;text-decoration:'none'")  Trip Type 
+                                i.fa.fa-caret-down
+                            #demo4.collapse.list-group-submenu
+                                a.list-group-item
+                                    input.filter(type='radio', value='Adventure', name='tripType')
+                                    |  Adventure
+                                a.list-group-item
+                                    input.filter(type='radio', value='Luxury', name='tripType')
+                                    |  Luxury
+                                a.list-group-item
+                                    input.filter(type='radio', value='Romantic', name='tripType')
+                                    |  Romantic
+                                a.list-group-item
+                                    input.filter(type='radio', value='Family', name='tripType')
+                                    |  Family
+                                a.list-group-item
+                                    input.filter(type='radio', value='Religious', name='tripType')
+                                    |  Religious
+                            
+                            a.list-group-item.list-group-item.strong.text-center(style='background: #444444; color: white;' data-toggle='collapse')
+
+                //packages
+                .col-md-9.list
+                    each package in data
+                        .col-md-3.panel.panel-header(style="margin-bottom:30px;margin-right:30px; padding:4px; background:rgb(246, 246, 252); box-shadow:5px")
+                            img(src='http://via.placeholder.com/400x400', alt='package1' style='width:100%')
+                            h4.strong.text-left(style="font-weight:800") #{package.location}
+                            h5.text-left Rs#{package.price}
+                            .duration.hidden=package.duration
+                            .popularity.hidden=package.popularity
+                            .tripType.hidden=package.tripType
+                            .hotelRating.hidden=package.hotelRating
+                            h5.text-left #{package.startDate.slice(0,-5)} to #{package.endDate.slice(0,-5)}
+                            -var linkToPackage = '/packageDetails?id='+package.packageId
+                            a(href=linkToPackage)
+                             button.btn.btn-primary.center(style='background: grey;border:none') Book Now
+
+    include footer.pug
+    script(src='//code.jquery.com/jquery-1.11.1.min.js') 
+    script(src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js')
+
+    script(type='text/javascript').
+        var packageArray =!{JSON.stringify(data)}
+
+    
+    script(src='//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js')
+    script(src='/javascripts/sortPackage.js')

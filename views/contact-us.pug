@@ -1,0 +1,28 @@
+
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+    title Contact Tripinline
+    link(href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css' rel='stylesheet')
+    link(href='/stylesheets/style1.css', rel='stylesheet', type='text/css', media='all')
+    link(href='/stylesheets/login-register.css', rel='stylesheet', type='text/css', media='all')
+    script(src='//code.jquery.com/jquery-1.11.1.min.js')
+    script(src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js')
+    link(rel='stylesheet', href='/stylesheets/font-awesome.min.css')
+  
+  body
+    include header.pug
+    .container
+     .row(style='margin-top:300px')
+      .col-md-2.col-sm-2.col-xs-0
+      .col-md-8.col-sm-8.col-xs-8
+        h2.contact-us-head CONTACT US
+        div
+          h3.contact-us-margin Mobile : 9041228619
+          h3.contact-us-margin Email : tripinline@gmail.com
+          h3.contact-us-margin Facebook : tripinline
+      img.col-md-2.col-sm-2.col-xs-4(style='float:left ', src='images/Contactus.jpg')
+    // //footer starts here
+    include footer.pug

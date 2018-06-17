@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        link(href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css' rel='stylesheet')
+        link(href='/stylesheets/style1.css', rel='stylesheet', type='text/css', media='all')
+        script(src='//code.jquery.com/jquery-1.11.1.min.js')
+        script(src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js')
+        link(rel='stylesheet', href='/stylesheets/font-awesome.min.css')
+  
+
+        title Document
+
+    body
+      include header.pug
+      .container(style='margin-top:100px;margin-bottom:100px')
+       .row
+        .col-xs-1
+        .col-xs-10
+          .panel.panel-info
+            .panel-heading
+              .panel-title
+                .row
+                  .col-xs-6
+                    h5 Dashboard
+                  .col-xs-6
+                   a(href="/packageList")
+                    button.btn.btn-primary.btn-sm.btn-block(type='button')
+                      span.glyphicon.glyphicon-share-alt
+                      |  Continue exploring packages
+
+
+            .panel-body
+             each package in packagesBought
+              -var link = "/packageDetails?id="+package.packageBoughtId
+               a(href=link style='color:inherit; text-decoration:none')
+                .row
+                  .col-md-2
+                    img.img-responsive(src='http://placehold.it/100x70')
+                  .col-md-4
+                    h4.product-name
+                      strong #{package.location}
+                    h5(style="margin-top:10px") Package Id : #{package.packageId}
+                  .col-md-6
+                    ul.list-group
+                     li.list-group-item
+                      h6
+                        strong Package Price : 
+                          span #{package.price}
+                     li.list-group-item
+                      h6
+                        strong No. Of Packages Bought : 
+                          span #{package.numberOfPackages}
+                     li.list-group-item
+                      h6
+                        strong Total Amount paid :   
+                          span #{package.totalPaid}
+                     li.list-group-item
+                      h6
+                        strong Unique id :  
+                          span #{package.uniqueId}
+                        
+
+
+            .panel-footer
+              .row.text-center
+                
+      include footer.pug   

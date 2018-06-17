@@ -1,0 +1,37 @@
+.header-w3layouts
+      // Navigation
+      nav.navbar.navbar-default.navbar-fixed-top(style='background:#191d22')
+       .container
+        .navbar-header.page-scroll
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-ex1-collapse')
+            span.sr-only Tourist
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          h1(style="margin:0px")
+           a(href='/index' class='navbar-brand' style="margin:0px")
+            img(src='/images/thisisit.png', style="width:50px;height:50px" alt='')
+        // Collect the nav links, forms, and other content for toggling
+        .collapse.navbar-collapse.navbar-ex1-collapse
+          ul.nav.navbar-nav.navbar-right.cl-effect-15
+            // Hidden li included to remove active class from about link when scrolled up past about section
+            li.hidden
+              a.page-scroll(href='#page-top')
+            li
+              a.page-scroll.scroll(href='/aboutUs') ABOUT US
+            li
+              a.page-scroll.scroll(href='/packageList') TRIPS
+            li
+              a.page-scroll.scroll(href='/contactUs') CONTACT US
+            li
+              if forHeader
+                .dropdown
+                  button.dropdown-toggle(type="button" style="margin-top:5px" data-toggle="dropdown") #{forHeader}
+                    span.caret
+                  ul.dropdown-menu.list-group(style="margin-left:-20px")
+                    li.list-group-item(style="margin-left:0px")
+                      a(href='/users/dashboard') Dashboard
+                    li.list-group-item(style="margin-left:0px")
+                      a(href='/users/logout') Logout
+              else 
+                a.page-scroll.scroll(href='/users') Login

@@ -1,0 +1,109 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+    title Document
+    link(href='/stylesheets/bootstrap.css', rel='stylesheet', type='text/css', media='all')
+    link(href='/stylesheets/style1.css', rel='stylesheet', type='text/css', media='all')
+    link(rel="stylesheet" href="/stylesheets/font-awesome.min.css" type='text/css', media='all')
+    // bootstrap-css
+    script(src='//code.jquery.com/jquery-1.11.1.min.js')
+    script(src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js')
+    link(href='/stylesheets/package-details.css', rel='stylesheet', type='text/css', media='all')
+    
+  body
+    include header.pug
+
+    .container
+      .row.header.well
+        .col-md-12
+          img(src='http://via.placeholder.com/1800x800', alt='')
+      .row.well
+        .col-md-8
+          div.heading #{location}
+        .col-md-4 
+          .col-md-4.text-right
+            a(style="font-size:2.5em").social-button.twitter(href='#')
+              i.fa.fa-twitter
+          .col-md-4.text-right
+            a(style="font-size:2.5em").social-button.facebook(href='https://www.facebook.com/tripinline')
+              i.fa.fa-facebook
+          .col-md-4.text-right
+            a(style="font-size:2.5em").social-button.instagram(href='https://www.instagram.com/tripinline')
+              i.fa.fa-instagram
+
+      .row.new-row.well
+        .col-md-8 
+          div  #{startDate} - #{endDate}
+        .col-md-1
+        .col-md-3 2 Days and 1 Night
+
+      .row.new-row.well
+          .col-md-12
+            .heading Overview
+            .col-md-8.overview-text
+              p.lead #{overview} 
+            .col-md-1
+            .col-md-3.overview-text.label.label-info.text-uppercase
+              p #{notes}
+          
+      .row.well
+        .col-md-12
+          .infographics
+            .col-md-2
+              img(src="/fron-end-dev/images/infographics/3star.png", alt="", srcset="")
+            .col-md-2
+              img(src="/fron-end-dev/images/infographics/Adventure.png", alt="", srcset="")
+            .col-md-2
+              img(src="/fron-end-dev/images/infographics/Flight.png", alt="", srcset="")
+            .col-md-2
+              img(src="/fron-end-dev/images/infographics/Breakfast.png", alt="", srcset="")
+            
+
+      .row.new-row.container.well
+        ul.timeline
+          each day in itinerary
+                li
+                  .timeline-badge
+                  .timeline-panel.panel
+                    .timeline-heading.panel-heading.strong
+                      h4.timeline-title Day#{itinerary.indexOf(day)+1}
+                    .timeline-body.panel-body
+                      ul
+                        each item in day
+                          li=item
+
+
+      .row.new-row.well
+        .col-md-5.panel
+          .heading.panel-heading Inclusive
+            ul.panel-body
+              each val in inclusive
+                li=val
+        .col-md-1
+        .col-md-5.panel
+          .heading.panel-heading Exclusive
+            ul.panel-body
+              each val in exclusive
+                li=val
+
+
+      .row.new-row.well
+        .col-md-6
+        .col-md-6
+          .col-md-3
+            button.btn.btn-info Post a Query
+          .col-md-3
+            a(href="/users/paytm")
+              button.btn.btn-primary Book Now Rs #{price}
+              
+               
+
+    //footer
+    include footer.pug
+    
+    
+
+    

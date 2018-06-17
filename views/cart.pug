@@ -1,0 +1,69 @@
+
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        link(href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css' rel='stylesheet')
+        link(href='/stylesheets/style1.css', rel='stylesheet', type='text/css', media='all')
+        script(src='//code.jquery.com/jquery-1.11.1.min.js')
+        script(src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js')
+        link(rel='stylesheet', href='/stylesheets/font-awesome.min.css')
+    // //font-awesome-icons
+        title Document
+    body
+      include header.pug
+      .container(style='margin-top:100px;margin-bottom:100px')
+       .row
+        .col-xs-1
+        .col-xs-10
+          .panel.panel-info
+            .panel-heading
+              .panel-title
+                .row
+                  .col-md-6
+                    h5
+                      span.glyphicon.glyphicon-shopping-cart
+                      |  Shopping Cart
+                  .col-md-6
+                    button.btn.btn-primary.btn-sm.btn-block(type='button')
+                      span.glyphicon.glyphicon-share-alt
+                      |  Continue exploring packages
+            .panel-body
+             each package in data
+                .row
+                    -var link = "/packageDetails?id="+package.packageBoughtId
+                    a(href=link style='color:inherit; text-decoration:none')
+                      .col-md-2
+                        img.img-responsive(src='http://placehold.it/100x70')
+                    -var link = "/packageDetails?id="+package.packageBoughtId
+                    a(href=link style='color:inherit; text-decoration:none')
+                      .col-md-4
+                        h4.product-name
+                          strong #{package.location}
+                        h5(style="margin-top:10px") Package Id : #{package.packageId}
+                    .col-md-6
+                      ul.list-group
+                        li.list-group-item
+                          h6
+                            strong Package Price : 
+                              span #{package.price}
+                        li.list-group-item
+                          strong Number Of Packages : 
+                          input.form-control.input-sm#itemNo(type='text', value=package.numberOfPackages)
+                        li.list-group-item
+                          strong Total:            
+                            span             
+                    
+                hr
+              
+            .panel-footer
+              .row.text-center
+                .col-xs-9
+                  h4.text-right
+                    | Total 
+                    strong 
+                .col-xs-3
+                  button.btn.btn-success.btn-block(type='button')
+                    | Checkout
+      include footer.pug

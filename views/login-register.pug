@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        link(href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css' rel='stylesheet')
+        link(href='/stylesheets/style1.css', rel='stylesheet', type='text/css', media='all')
+        link(href='/stylesheets/login-register.css', rel='stylesheet', type='text/css', media='all')
+        link(rel="stylesheet" href="/stylesheets/font-awesome.min.css" type='text/css', media='all')
+        script(src='//code.jquery.com/jquery-1.11.1.min.js')
+        script(src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js')
+
+        title tripINLINE
+
+    body
+     include header.pug
+     .container
+      .row
+        .col-md-6.col-md-offset-3
+          .panel.panel-login
+            .panel-heading
+              .row
+                .col-xs-6
+                  a#login-form-link.active(href='#') Login
+                .col-xs-6
+                  a#register-form-link(href='#') Register
+              hr
+            .panel-body
+              .row
+                .col-lg-12
+                  form#login-form(action='/users/login', method='get', role='form', style='display: block;')
+                    .form-group
+                      input#username.form-control(type='text', name='emailAddress', tabindex='1', placeholder='email address', value='')
+                    .form-group
+                      input#password.form-control(type='password', name='password', tabindex='2', placeholder='Password')
+                    .form-group.text-center
+                      input#remember(type='checkbox', tabindex='3', name='remember')
+                      label(for='remember')  Remember Me
+                    .form-group
+                      p.text-danger.h4 #{status}
+                    .form-group
+                      .row
+                        .col-sm-6.col-sm-offset-3
+                          input#login-submit.form-control.btn.btn-login(type='submit', name='login-submit', tabindex='4', value='Log In')
+                  form#register-form(action='/users/register', method='post', role='form', style='display: none;')
+                    .row
+                      .col-md-6
+                        .form-group
+                          input#first-name.form-control(type='text', name='firstName', tabindex='1', placeholder='First Name' required)
+                      .col-md-6
+                        .form-group
+                          input#last-name.form-control(type='text', name='lastName', tabindex='1', placeholder='Last Name' required)
+                    .form-group
+                      input#email.form-control(type='email', name='emailAddress', tabindex='2', placeholder='Email Address', value='' required)
+                    .form-group
+                      input#mobile.form-control(type='tel', name='mobile', tabindex='2', placeholder='Mobile Number', value='' required)
+                    .form-group
+                      input#password.form-control(type='password', name='password', tabindex='3', placeholder='Password' required)
+                    .form-group
+                      input#confirm-password.form-control(type='password', name='confirm-password', tabindex='3', placeholder='Confirm Password' required)
+                    .form-group
+                      p #{registerStatus}
+                    .form-group
+                      .row
+                        .col-sm-6.col-sm-offset-3
+                          input#register-submit.form-control.btn.btn-register(type='submit', name='register-submit', tabindex='4', value='Register Now')
+     include footer.pug   
+        script(src='/javascripts/login-register.js')

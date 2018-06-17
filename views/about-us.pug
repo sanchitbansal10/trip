@@ -1,0 +1,39 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+    title About Tripinline
+    link(href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css' rel='stylesheet')
+    link(href='/stylesheets/style1.css', rel='stylesheet', type='text/css', media='all')
+    link(href='/stylesheets/login-register.css', rel='stylesheet', type='text/css', media='all')
+    script(src='//code.jquery.com/jquery-1.11.1.min.js')
+    script(src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js')
+    link(rel='stylesheet', href='/stylesheets/font-awesome.min.css')
+  body
+    include header
+    .about-us-img-container
+      .about-us-couple
+        h2 ABOUT THE COMPANY
+        p
+          | Founded in 2017 by Thapar University’s Alumni, TRIPINLINE is a team
+          | of very enthusiastic and passionate travel buffs. We work to bring
+          | the trip to the travel community and make location based travel
+          | bookings more mobile.
+          | TRIPINLINE is an online aggregator for all the trip organisers/planners
+          | and serves as an advertisement platform for the travel organisers.
+          | The user can easily compare different trips based on user ratings,
+          | prices, iteneraries and reviews. Hence the user can reap the best
+          | tailored trip for oneself.
+      .about-us-couple
+        h2 OUR MISSION
+        p
+          | Our mission is to bridge the gap between the travellers and the local
+          | travel agents. We work to provide institutions with recreational as
+          | well as educational trips. Our travel experts are trained to help the
+          | institutions organize a trip by helping them in getting qoutes from
+          | different travel agents for the same trip.
+    .about-bottom-img
+      img(src='images/abou-bottom.jpg', alt='')
+    include footer

@@ -1,0 +1,39 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+    title Document
+    link(href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css' rel='stylesheet')
+    link(href='/stylesheets/style1.css', rel='stylesheet', type='text/css', media='all')
+    script(src='//code.jquery.com/jquery-1.11.1.min.js')
+    script(src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js')
+    link(rel='stylesheet', href='/stylesheets/font-awesome.min.css')
+  
+  body
+    include header.pug
+    .container
+     .row(style='margin-top:100px;margin-bottom:50px')
+       .col-md-12 
+          .page-header
+            h3 Please read the below information and complete the payment by scanning the QR code with paytm app
+     .row
+       .col-md-4.col-sm-4
+        .panel.panel-default(style="margin-top:40px")
+            .panel-heading Please Provide Following Info While Doing Payment
+            
+        ul.list-group
+            li.list-group-item(style="margin-left:0px") Email address
+            li.list-group-item(style="margin-left:0px") Package id
+            li.list-group-item(style="margin-left:0px") Number to be bought
+        .panel-footer
+                div Once your payment is confirmed the bought packages will be updated in your dashboard
+       .col-md-2
+
+       .col-md-6.col-sm-8
+            img(src="/images/paytm.jpeg", alt="paytm QR code" style="width:80%;height:100%")
+                
+      
+    // //footer starts here
+    include footer.pug

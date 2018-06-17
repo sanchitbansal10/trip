@@ -1,0 +1,522 @@
+doctype html
+html(lang='en')
+  head
+    title TripINLINE
+    // custom-theme
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+    meta(name='keywords', content='Tourist a Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,\
+    Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design')
+    script(type='application/x-javascript').
+      addEventListener("load", function() {
+      setTimeout(hideURLbar, 0);
+      }, false);
+      function hideURLbar() {
+      window.scrollTo(0, 1);
+      }
+    link(href='https://fonts.googleapis.com/css?family=Engagement|Teko:500|Yesteryear', rel='stylesheet')
+    link(href='/stylesheets/bootstrap.css', rel='stylesheet', type='text/css', media='all')
+    // bootstrap-css
+    link(href='/stylesheets/owl.carousel.css', rel='stylesheet')
+    // Owl-carousel-CSS
+    link(href='/stylesheets/popup-box.css', rel='stylesheet', type='text/css', media='all')
+    // pop-up css
+    link(href='/stylesheets/style.css', rel='stylesheet', type='text/css', media='all')
+    // banner css
+    link(rel='stylesheet', href='/stylesheets/poposlides.css', type='text/css', media='all')
+    // //banner css
+    // font-awesome-icons
+    link(rel='stylesheet', href='/stylesheets/font-awesome.min.css')
+    script(src='//code.jquery.com/jquery-1.11.1.min.js')
+    script(src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js')
+    // //font-awesome-icons
+    // google fonts
+    //
+      <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
+      <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
+    // //google fonts
+  // <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+  body#page-top
+    // /main-header
+    #home.demo-inner-content
+      .main_agileits
+        // /banner-info
+        // header
+        .header-w3layouts
+          // Navigation
+          nav.navbar.navbar-default.navbar-fixed-top
+            .navbar-header.page-scroll
+              button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-ex1-collapse')
+                span.sr-only Tourist
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+              
+              div.navbar-brand.navbar-brand-centered(style="padding:0px")
+               a(href='index.html')
+                img(src='images/thisisit.png', alt='')
+            // Collect the nav links, forms, and other content for toggling
+            .collapse.navbar-collapse.navbar-ex1-collapse
+              ul.nav.navbar-nav
+                li.search
+                  i.banner-button.fa.fa-search(style="color:white")
+                  input.banner-input(type='text', placeholder='Search Tripinline', name='', id='', style="margin-left:5px")
+              ul.nav.navbar-nav.navbar-right.cl-effect-15.navbar-right-custom
+                // Hidden li included to remove active class from about link when scrolled up past about section
+                li.hidden
+                  a.page-scroll(href='#page-top')
+                li
+                  a(href='aboutUs') ABOUT US
+                li
+                  a(href='packageList') TRIPS
+                li
+                  a(href='contactUs') CONTACT US
+                li
+                  if forHeader
+                    .dropdown
+                        button.dropdown-toggle(type="button" style="margin-top:5px" data-toggle="dropdown") #{forHeader}
+                            span.caret
+                        ul.dropdown-menu.list-group(style="margin-left:-20px,padding:0px")
+                            li.list-group-item(style="margin-left:0px")
+                                a(href='/users/dashboard' style="color:black") Dashboard
+                            li.list-group-item(style="margin-left:0px")
+                                a(href='/users/logout' style="color:black") Logout
+                  else 
+                    a.page-scroll.scroll(href='/users' style="border: 1px solid white") Login
+            // /.navbar-collapse
+            // /.container
+        // //header
+        // banner info
+        .w3-banner-head-info
+          .container
+            .banner-text
+              p
+                | We can take you to
+                br
+                |  countries and cities,
+                br
+                |  We can't pronounce.
+              //
+                <h2 class="editContent">TRIPINLINE</h2>
+                <div class="banner-text-underline"></div>
+                <p>We can take you to countries and cities, We can pronounce</p>
+              //
+                <div>
+                <input class="banner-input" type="text" placeholder="Enter your destination">
+                <button class="banner-button"> GO </button>
+                </div>
+              //
+                <div class="book-form">
+                form on the image to search trips
+                <form action="#" method="post">
+                <div class="col-md-3 form-time-w3layouts editContent">
+                <label class="editContent"><span class="fa fa-user" aria-hidden="true"></span> Traveller Name</label>
+                <input type="text" placeholder="Name" required="">
+                </div>
+                <div class="col-md-3 form-date-w3-agileits editContent">
+                <label class="editContent"><span class="fa fa-map-marker" aria-hidden="true"></span> Travel place</label>
+                <select class="form-control">
+                <option>London</option>
+                <option>Paris</option>
+                <option>India</option>
+                <option>Japan</option>
+                <option>America</option>
+                </select>
+                </div>
+                <div class="col-md-2 form-left-agileits-w3layouts editContent">
+                <label class="editContent"><span class="fa fa-bus" aria-hidden="true"></span> Trip in</label>
+                <div class="agileits_w3layouts_main_gridl">
+                <input class="date has Datepicker" id="datepicker" name="Text" type="text" value="Start Date" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '21/11/2017';}" required="">
+                </div>
+                </div>
+                <div class="col-md-2 form-left-agileits-w3layouts editContent">
+                <label class="editContent"><span class="fa fa-bus" aria-hidden="true"></span> Trip out</label>
+                <div class="agileits_w3layouts_main_gridl">
+                <input class="date has Datepicker" id="datepicker1" name="Text" type="text" value="Return Date" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '21/11/2017';}" required="">
+                </div>
+                </div>
+                <div class="col-md-2 form-left-agileits-submit editContent">
+                <input type="submit" value="Send">
+                </div>
+                <div class="clearfix"></div>
+                </form>
+                </div>
+    .slides-box
+      ul.slides
+        li(style='background: url(images/s1.jpg) no-repeat;background-size:cover;')
+        li(style='background: url(images/s2.jpg) no-repeat;background-size:cover;')
+        li(style='background: url(images/s3.jpg) no-repeat;background-size:cover;')
+        li(style='background: url(images/s4.jpg) no-repeat;background-size:cover;')
+        li(style='background: url(images/s5.jpg) no-repeat;background-size:cover;')
+    // /banner-section
+    #about.about(style='background:#f6f6f6')
+      // container
+      .about-top-grids
+        img(src='images/Photofox1-to-be.jpg', alt='')
+        p
+          | Tripinline is an online aggregator for all trip organizers/planners and serves as an advertising platform for the travel organizers. The user can easily compare differet trips based on user ratings, prices, itenararies and reviews. Hence the user can
+          | reap the best tailored trip for oneself.
+        .clearfix  
+    .container
+      .item-cost.row
+        .col-md-2.col-xs-6.col-sm-4.cost-w3
+          img(src='images/004-telemarketer.png', alt='')
+          div
+            h3 Verified Travel Agents
+            h4 Handpicked Top 10%
+          .clearfix
+        .col-md-2.col-xs-6.col-sm-4.cost-w3
+          img(src='images/001-baggage.png', alt='')
+          div
+            h3 Customised Packages
+            h4 Fully Personalised Holidays
+          .clearfix
+        .col-md-2.col-xs-6.col-sm-4.cost-w3
+          img(src='images/placeholder(1).png', alt='')
+          div
+            h3 Trip Discovery
+            h4 Location Based Trip
+          .clearfix
+        .col-md-2.col-xs-6.col-sm-4.cost-w3
+          img(src='images/002-bus-1.png', alt='')
+          div
+            h3 Bus,Tempo Booking
+            h4 Easy To Use UI
+          .clearfix
+        .col-md-2.col-xs-6.col-sm-4.cost-w3
+          img(src='images/bonfire.png', alt='')
+          div
+            h3 Hot Prices
+            h4 Great Value, Always
+          .clearfix
+        .col-md-2.col-xs-6.col-sm-4.cost-w3
+          img(src='images/bribe(1).png', alt='')
+          div
+            h3 100% Service Assurance
+            h4 Our Guarantee
+          .clearfix
+    // //about-top
+    .container
+      .wthree_head_section
+        h3.title Featured Packages
+      #owl-demo-3.owl-carousel.package-carousel
+        .package-custom
+          img(src='images/check-for-package.jpg', alt='package1')
+          .package-custom-show.package1
+            h4 Laddakh
+            h5 Rs 5000
+          .package-custom-show-hover.package1
+            h4 Laddakh
+            h5 Rs 5000
+            h6.package-date 21 Jan-24 Jan 
+            h3 View
+        .package-custom
+          img(src='images/check-for-package.jpg', alt='package1')
+          .package-custom-show.package1
+            h4 Laddakh
+            h5 Rs 5000
+          .package-custom-show-hover.package1
+            h4 Laddakh
+            h5 Rs 5000
+            h6.package-date 21 Jan-24 Jan 
+            h3 View
+        .package-custom
+          img(src='images/check-for-package.jpg', alt='package1')
+          .package-custom-show.package1
+            h4 Laddakh
+            h5 Rs 5000
+          .package-custom-show-hover.package1
+            h4 Laddakh
+            h5 Rs 5000
+            h6.package-date 21 Jan-24 Jan 
+            h3 View
+        .package-custom
+          img(src='images/check-for-package.jpg', alt='package1')
+          .package-custom-show.package1
+            h4 Laddakh
+            h5 Rs 5000
+          .package-custom-show-hover.package1
+            h4 Laddakh
+            h5 Rs 5000
+            h6.package-date 21 Jan-24 Jan 
+            h3 View
+        .package-custom
+          img(src='images/check-for-package.jpg', alt='package1')
+          .package-custom-show.package1
+            h4 Laddakh
+            h5 Rs 5000
+          .package-custom-show-hover.package1
+            h4 Laddakh
+            h5 Rs 5000
+            h6.package-date 21 Jan-24 Jan 
+            h3 View
+        .package-custom
+          img(src='images/check-for-package.jpg', alt='package1')
+          .package-custom-show.package1
+            h4 Laddakh
+            h5 Rs 5000
+          .package-custom-show-hover.package1
+            h4 Laddakh
+            h5 Rs 5000
+            h6.package-date 21 Jan-24 Jan 
+            h3 View
+        .package-custom
+          img(src='images/check-for-package.jpg', alt='package1')
+          .package-custom-show.package1
+            h4 Laddakh
+            h5 Rs 5000
+          .package-custom-show-hover.package1
+            h4 Laddakh
+            h5 Rs 5000
+            h6.package-date 21 Jan-24 Jan 
+            h3 View
+        .package-custom
+          img(src='images/check-for-package.jpg', alt='package1')
+          .package-custom-show.package1
+            h4 Laddakh
+            h5 Rs 5000
+          .package-custom-show-hover.package1
+            h4 Laddakh
+            h5 Rs 5000
+            h6.package-date 21 Jan-24 Jan 
+            h3 View
+        .package-custom
+          img(src='images/check-for-package.jpg', alt='package1')
+          .package-custom-show.package1
+            h4 Laddakh
+            h5 Rs 5000
+          .package-custom-show-hover.package1
+            h4 Laddakh
+            h5 Rs 5000
+            h6.package-date 21 Jan-24 Jan 
+            h3 View
+        .package-custom
+          img(src='images/check-for-package.jpg', alt='package1')
+          .package-custom-show.package1
+            h4 Laddakh
+            h5 Rs 5000
+          .package-custom-show-hover.package1
+            h4 Laddakh
+            h5 Rs 5000
+            h6.package-date 21 Jan-24 Jan 
+            h3 View
+    // stats
+    #stats.stats.jarallax
+      .agile_overlay2
+        .container
+          .inner_w3l_agile_grids-1
+            .col-md-3.w3layouts_stats_left.w3_counter_grid
+              // <i class="fa fa-smile-o" aria-hidden="true"></i>
+              p.counter 1,546
+              h3 Customers served
+            .col-md-3.w3layouts_stats_left.w3_counter_grid1
+              // <i class="fa fa-briefcase" aria-hidden="true"></i>
+              p.counter 14,345
+              h3 Travel Agents
+            .col-md-3.w3layouts_stats_left.w3_counter_grid2
+              // <i class="fa fa-trophy" aria-hidden="true"></i>
+              p.counter 563
+              h3 Trips Organized
+            .col-md-3.w3layouts_stats_left.w3_counter_grid3
+              // <i class="fa fa-camera" aria-hidden="true"></i>
+              p.counter 2,874
+              h3 Number of visits
+            .clearfix  
+    // //stats
+    // packages new
+    // packages new end here
+    // contact
+    #contact.w3ls-section.contact
+      .container
+        .contact_wthreerow.agileits-w3layouts.tourist-container
+          .col-md-7
+            img.svg-travelAgent-custom(src='images/register.jpg')
+          .col-md-5.agileits_w3layouts_contact_gridl.tourist-text-container
+            .test Travel Agent?
+            .test2.but-spl Register
+          .clearfix  
+    // //contact
+    // agile_testimonials
+    // //agile_testimonials
+    // footer start here
+    .footer-top
+      .footer-img
+        img(src='images/footer.jpg')
+      .footer-testinomial
+        #testimonials.agile_testimonials
+          .container
+            .wthree_head_section
+              h3.title testimonials
+            .agile_wthree_inner_grids
+              .test-agile_main_section
+                #owl-demo2.owl-carousel
+                  .agile
+                    .test-grid
+                      .test-grid1
+                        .test-grid2
+                          img.img-r(src='http://via.placeholder.com/150x150', alt='')
+                        .test-grid2_text
+                          h4 Lorem Ipsum
+                        .clearfix
+                      p.para-w3-agile
+                        | Lorem ipsum dolor sit amet, consectetur adipiscing elit,consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                  .agile
+                    .test-grid
+                      .test-grid1
+                        .test-grid2
+                          img.img-r(src='http://via.placeholder.com/150x150', alt='')
+                        .test-grid2_text
+                          h4 Lorem Ipsum
+                        .clearfix
+                      p.para-w3-agile
+                        | Lorem ipsum dolor sit amet, consectetur adipiscing elit,consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                  .agile
+                    .test-grid
+                      .test-grid1
+                        .test-grid2
+                          img.img-r(src='http://via.placeholder.com/150x150', alt='')
+                        .test-grid2_text
+                          h4 Lorem Ipsum
+                        .clearfix
+                      p.para-w3-agile
+                        | Lorem ipsum dolor sit amet, consectetur adipiscing elit,consectetur adipiscing elit, sed do eiusmod tempor incididunt
+    // //footer starts here
+    .footer-agile
+      .container
+        .footer-btm-agileinfo
+          .col-md-3.col-xs-3.w3social.footer-brand
+            h3 TRIPINLINE
+            div
+              a.social-button.twitter(href='#')
+                i.fa.fa-twitter
+              a.social-button.facebook(href='https://www.facebook.com/tripinline')
+                i.fa.fa-facebook
+              a.social-button.instagram(href='https://www.instagram.com/tripinline')
+                i.fa.fa-instagram
+          .col-md-3.col-xs-3.footer-grid.w3social
+            h3 Know us better
+            ul
+              li
+                a(href='index.html') Work with us
+              li
+                a.scroll(href='#about') About us
+          .col-md-3.col-xs-3.footer-grid
+            h3 Contact Info
+            ul
+              li
+                i.fa.fa-map-marker
+                | 5544, Modern Housing Complex, Mani Majra, Chandigarh
+          .col-md-3.col-xs-3.footer-grid
+            h3 Queries
+            ul
+              li
+                | tripinline@gmail.com
+          .clearfix  
+        .footer-agilem
+          .col-sm-4.col-xs-3.col-md-3
+            | All Rights Reserved 
+            i.fa.fa-copyright
+            |  2018
+          .col-md-5
+          .col-md-4.terms-footer
+            p
+              | Terms And Condition
+              span Privacy Policy
+          .clearfix
+    // footer ends here
+    
+    script(type='text/javascript').
+      window.onload = function() {
+      document.getElementById("password1").onchange = validatePassword;
+      document.getElementById("password2").onchange = validatePassword;
+      }
+      function validatePassword() {
+      var pass2 = document.getElementById("password2").value;
+      var pass1 = document.getElementById("password1").value;
+      if (pass1 != pass2)
+      document.getElementById("password2").setCustomValidity("Passwords Don't Match");
+      else
+      document.getElementById("password2").setCustomValidity('');
+      //empty string means no validation error
+      }
+    // //popup signup form
+    // js
+    script(type='text/javascript', src='/javascripts/jquery-2.1.4.min.js')
+    // //js
+    // Stats-Number-Scroller-Animation-JavaScript
+    script(src='/javascripts/waypoints.min.js')
+    script(src='/javascripts/counterup.min.js')
+    script.
+      jQuery(document).ready(function($) {
+      $('.counter').counterUp({
+      delay: 10,
+      time: 1000
+      });
+      });
+    // //Stats-Number-Scroller-Animation-JavaScript
+    // FlexSlider
+    script(defer='', src='/javascripts/jquery.flexslider.js')
+    script(type='text/javascript').
+      $(window).load(function() {
+      $('.flexslider').flexslider({
+      animation: "pagination",
+      start: function(slider) {
+      $('body').removeClass('loading');
+      }
+      });
+      });
+    // End-slider-script
+    // requried-jsfiles-for owl
+    // testimonials
+    script(src='/javascripts/owl.carousel.js')
+    script.
+      $(document).ready(function() {
+      $("#owl-demo2").owlCarousel({
+      items: 1,
+      lazyLoad: false,
+      autoPlay: true,
+      navigation: false,
+      navigationText: false,
+      pagination: true,
+      dots: false
+      });
+      $("#owl-demo-3").owlCarousel({
+      items: 4,
+      itemsDesktop: [1199, 3],
+      itemsDesktopSmall: [979, 3]
+      });
+      });
+    // //requried-jsfiles-for owl
+    // //testimonials
+    // start-smoth-scrolling
+    script(src='/javascripts/SmoothScroll.min.js')
+    script(type='text/javascript', src='/javascripts/move-top.js')
+    script(type='text/javascript', src='/javascripts	/easing.js')
+    script(type='text/javascript').
+      jQuery(document).ready(function($) {
+      $(".scroll").click(function(event) {
+      event.preventDefault();
+      $('html,body').animate({
+      scrollTop: $(this.hash).offset().top
+      }, 1000);
+      });
+      });
+    // here stars scrolling icon
+    script(type='text/javascript').
+      $(document).ready(function() {
+      /*
+      var defaults = {
+      containerID: 'toTop', // fading element id
+      containerHoverID: 'toTopHover', // fading element hover id
+      scrollSpeed: 1200,
+      easingType: 'linear'
+      };
+      */
+      $().UItoTop({
+      easingType: 'easeOutQuart'
+      });
+      });
+    // //here ends scrolling icon
+    // Scrolling Nav JavaScript
+    script(src='/javascripts/scrolling-nav.js')
+    // //fixed-scroll-nav-js
