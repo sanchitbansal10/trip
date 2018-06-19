@@ -4,7 +4,7 @@ html(lang='en')
     meta(charset='UTF-8')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     meta(http-equiv='X-UA-Compatible', content='ie=edge')
-    title Document
+    title Package Details
     link(href='/stylesheets/bootstrap.css', rel='stylesheet', type='text/css', media='all')
     link(href='/stylesheets/style1.css', rel='stylesheet', type='text/css', media='all')
     link(rel="stylesheet" href="/stylesheets/font-awesome.min.css" type='text/css', media='all')
@@ -96,9 +96,10 @@ html(lang='en')
       .row.new-row.well
         .col-md-6
         .col-md-6
-          .col-md-3
+         .row
+          .col-md-3.col-xs-5
             button.btn.btn-info Post a Query
-          .col-md-3
+          .col-md-3.col-xs-5
             a(href="/users/paytm")
               button.btn.btn-primary Book Now Rs #{price}
               

@@ -1256,7 +1256,8 @@ canvas {
 .footer-brand a {
   padding: 0;
   color: white;
-  font-size: 1.3em
+  font-size: 1.3em;
+  margin: 10px
 }
 
 .footer-agilem div p span {
@@ -1309,7 +1310,6 @@ canvas {
 
 .about-us-img-container {
   padding-top: 100px;
-  margin-bottom: 100px
 }
 
 .about-us-img-container p {
@@ -1331,7 +1331,7 @@ canvas {
 }
 
 .about-us-couple {
-  margin-top: 100px;
+  margin-top: 5px;
   margin-bottom: 40px;
   margin-left: 80px;
   margin-right: 80px

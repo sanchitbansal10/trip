@@ -3,8 +3,8 @@ var User = require('../models/user')
 
 //controller to register new user
 var registerNewUser =function(req,res){
-    console.log('registerNewUSer called')
-    console.log(req.body)
+    /* console.log('registerNewUSer called')
+    console.log(req.body) */
     var userInput = {
         emailAddress : req.body.emailAddress,
         firstName : req.body.firstName,
@@ -13,13 +13,13 @@ var registerNewUser =function(req,res){
         password : req.body.password
     }
     //checks for already existing user with given emailid
-    User.find({email:userInput.email},(err,data) => {
+    /* User.find({email:userInput.email},(err,data) => {
         if(data){
             res.render('login-register', {registerStatus:'User with this email id already exist',forHeader:req.session.name})
         }
-        else {
+        else { */
             //checks for already registered mobile number
-            User.find({mobile:userInput.mobile},(err,data) => {
+            /* User.find({mobile:userInput.mobile},(err,data) => {
                 if(data){
                     res.render('login-register', {
                         registerStatus:'User with this mobile number already exist',
@@ -27,10 +27,9 @@ var registerNewUser =function(req,res){
                         forHeader:req.session.name
                 })
                 }
-                else {
+                else { */
                      //saving new registered user
                     var user = new User(userInput);
-                    console.log(user)
                     user.save(function(err,data){
                         if(err){
                         console.log('error in saving')
@@ -39,11 +38,10 @@ var registerNewUser =function(req,res){
                             res.render("login-register",{status:'please login with the registered credentials',forHeader:req.session.name})
                         }
                     })
-                }
+                }/* 
             });
-        }      
-    });
-}
+        }      */
+    
 
 //login a user
 var loginUser = function(req, res){

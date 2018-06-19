@@ -4,7 +4,7 @@ html(lang='en')
     meta(charset='UTF-8')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     meta(http-equiv='X-UA-Compatible', content='ie=edge')
-    title Document
+    title Packages
     // bootstrap-css
     
     // bootstrap-css
@@ -33,17 +33,18 @@ html(lang='en')
                             input.search(type='text', placeholder='Search Packages' style::placeholder='color:white').list-group-item.list-group-item.strong.text-center(style='background: #444444; color: white;width:100%')  
                             a.list-group-item.list-group-item.strong.text-center(style='background: #444444; color: white;' data-toggle='collapse')  Personalize Your Search
                             a.list-group-item.list-group-item-success.strong(href='#demo1' style='background: #f7f7f7;' data-toggle='collapse' data-parent='#MainMenu')
-                                i.fa.fa-photo(style="font-weight:600;text-decoration:'none';color:black") Sort
-                                i.fa.fa-caret-down
-                            #demo1.list-group-submenu   
-                                a(class="sort list-group-item" data-sort="price") Sort by Price 
+                                div(style="font-weight:600;text-decoration:'none';color:black") Sort
+                                
+                            #demo1.list-group-submenu 
+                                div  
+                                    a(class="sort list-group-item" data-sort="price") Sort by Price 
                                 div   
                                     a(class="sort list-group-item" data-sort="popularity") Sort by Popularity
                                 div   
                                     a(class="sort list-group-item" data-sort="duration") Sort by Duration
                             a.list-group-item.list-group-item.strong(href='#demo2' style='background: #f7f7f7;' data-toggle='collapse' data-parent='#MainMenu')
-                                i.fa.fa-book(style="font-weight:600;text-decoration:'none'") Hotel type 
-                                i.fa.fa-caret-down
+                                div(style="font-weight:600;text-decoration:'none'") Hotel type 
+                                
                             #demo2.collapse.list-group-submenu
                                 a.list-group-item
                                     input.filter(type='radio', value=5, name='hotelRating')
@@ -61,8 +62,8 @@ html(lang='en')
                                     input.filter(type='radio', value=1, name='hotelRating')
                                     |  1 star
                             a.list-group-item.list-group-item.strong(href='#demo4' style='background: #f7f7f7;' data-toggle='collapse' data-parent='#MainMenu')
-                                i.fa.fa-language(style="font-weight:600;text-decoration:'none'")  Trip Type 
-                                i.fa.fa-caret-down
+                                div(style="font-weight:600;text-decoration:'none'")  Trip Type 
+                                
                             #demo4.collapse.list-group-submenu
                                 a.list-group-item
                                     input.filter(type='radio', value='Adventure', name='tripType')
@@ -89,8 +90,10 @@ html(lang='en')
                             img(src='http://via.placeholder.com/400x400', alt='package1' style='width:100%')
                             h4.strong.text-left(style="font-weight:800") #{package.location}
                             h5.text-left Rs#{package.price}
+                            .price.hidden=package.price
                             .duration.hidden=package.duration
                             .popularity.hidden=package.popularity
+                            .location.hidden=package.location
                             .tripType.hidden=package.tripType
                             .hotelRating.hidden=package.hotelRating
                             h5.text-left #{package.startDate.slice(0,-5)} to #{package.endDate.slice(0,-5)}

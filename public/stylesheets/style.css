@@ -2430,7 +2430,6 @@ input[type="Search"]::-webkit-input-placeholder {
 
 @media screen and (max-width:600px){
 	.collapse.navbar-collapse.navbar-ex1-collapse ul{
-		max-width: 100%;
 		overflow-x: hidden;
 	}
 	ul.nav.navbar-nav.navbar-right.cl-effect-15.navbar-right-custom button{

@@ -10,20 +10,17 @@ var User = new Schema({
     "password" : String,
     "emailAddress" : String,
     "mobile" : String,
-    "packagesBought" : [{
+    "packagesBought" : {
+        type:[{
         "packageId" : String,
         "price": Number,
         "numberOfPackages": Number,
         "location" : String,
         "totalPaid" : Number,
         "uniqueId" : String
-    }],
-    "cart" : [{
-        "packageId": String,
-        "location": String,
-        "numberOfPackages": Number,
-        "price": Number
-    }]
+        }],
+        default: []
+    }
 })
 
  
