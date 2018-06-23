@@ -472,15 +472,6 @@ html(lang='en')
     script(src='/javascripts/SmoothScroll.min.js')
     script(type='text/javascript', src='/javascripts/move-top.js')
     script(type='text/javascript', src='/javascripts	/easing.js')
-    script(type='text/javascript').
-      jQuery(document).ready(function($) {
-      $(".scroll").click(function(event) {
-      event.preventDefault();
-      $('html,body').animate({
-      scrollTop: $(this.hash).offset().top
-      }, 1000);
-      });
-      });
     // here stars scrolling icon
     script(type='text/javascript').
       $(document).ready(function() {
