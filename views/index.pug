@@ -17,7 +17,7 @@ html(lang='en')
     // pop-up css
     link(href='/stylesheets/style.css', rel='stylesheet', type='text/css', media='all')
     // banner css
-    link(rel='stylesheet', href='/stylesheets/poposlides.css', type='text/css', media='all')
+    link(href="/stylesheets/sliderResponsive.css" rel="stylesheet")
     // //banner css
     // font-awesome-icons
     link(rel='stylesheet', href='/stylesheets/font-awesome.min.css')
@@ -134,9 +134,8 @@ html(lang='en')
                 <div class="clearfix"></div>
                 </form>
                 </div>
-    .slides-box
-      ul.slides
-        li(style='background: url(images/s5.jpg) no-repeat;background-size:cover;')
+    div.slider(style="height:100vh")
+        div(style='background: url(images/s5.jpg) no-repeat;height:100vh')
     // /banner-section
     #about.about(style='background:#f6f6f6')
       // container
