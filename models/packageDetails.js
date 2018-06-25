@@ -16,6 +16,7 @@ var Details = new Schema({
     location:String,
     tripType:String,
     price:Number,
+    timeFrame:String,
     hotelRating:Number,
     duration:Number,
     startDate:String,
@@ -25,7 +26,7 @@ var Details = new Schema({
     exclusive:[String],
     overview:String,
     notes : String,
-    inforgraphics:[String]
+    infographics:[String]
 })
 
 

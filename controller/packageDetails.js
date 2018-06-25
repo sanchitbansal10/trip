@@ -11,7 +11,7 @@ var packageDetailsControl =function(req,res){
     if(err){
       console.log('cant find')
     }
-    console.log(data[0].notes)
+    console.log(data[0])
      res.render('packageDetails',{
       location:data[0].location,
       startDate:data[0].startDate,
@@ -23,6 +23,7 @@ var packageDetailsControl =function(req,res){
       itinerary:data[0].itinerary,
       notes:data[0].notes,
       infographics:data[0].infographics,
+      timeFrame:data[0].timeFrame,
       forHeader:req.session.name
     }) 
   });

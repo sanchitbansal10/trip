@@ -37,9 +37,8 @@ html(lang='en')
 
       .row.new-row.well
         .col-md-8 
-          div  #{startDate} - #{endDate}
-        .col-md-1
-        .col-md-3 2 Days and 1 Night
+          div  #{startDate} - #{endDate} (#{timeFrame})
+        
 
       .row.new-row.well
           .col-md-12
@@ -55,14 +54,11 @@ html(lang='en')
         .col-md-12
           .infographics
             .row
-              .col-md-2.col-xs-6
-                img(src="/images/infographics/3star.png", alt="", srcset="")
-              .col-md-2.col-xs-6
-                img(src="/images/infographics/Adventure.png", alt="", srcset="")
-              .col-md-2.col-xs-6
-                img(src="/images/infographics/Flight.png", alt="", srcset="")
-              .col-md-2.col-xs-6
-                img(src="/images/infographics/Breakfast.png", alt="", srcset="")
+              each element in infographics
+                .col-md-2.col-xs-6
+                  -var src = 'images/reiconpack/'+element+'.png'
+                     img(src=src)
+                
             
 
       .row.new-row.container.well
