@@ -7,13 +7,7 @@ html(lang='en')
     meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
     meta(name='keywords', content='Tourist a Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,\
     Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design')
-    script(type='application/x-javascript').
-      addEventListener("load", function() {
-      setTimeout(hideURLbar, 0);
-      }, false);
-      function hideURLbar() {
-      window.scrollTo(0, 1);
-      }
+  
     link(href='https://fonts.googleapis.com/css?family=Engagement|Teko:500|Yesteryear', rel='stylesheet')
     link(href='/stylesheets/bootstrap.css', rel='stylesheet', type='text/css', media='all')
     // bootstrap-css
@@ -21,9 +15,10 @@ html(lang='en')
     // Owl-carousel-CSS
     link(href='/stylesheets/popup-box.css', rel='stylesheet', type='text/css', media='all')
     // pop-up css
+    link(rel='stylesheet', href='/stylesheets/poposlides.css', type='text/css', media='all')
     link(href='/stylesheets/style.css', rel='stylesheet', type='text/css', media='all')
     // banner css
-    link(rel='stylesheet', href='/stylesheets/poposlides.css', type='text/css', media='all')
+    
     // //banner css
     // font-awesome-icons
     link(rel='stylesheet', href='/stylesheets/font-awesome.min.css')
@@ -401,20 +396,7 @@ html(lang='en')
           .clearfix
     // footer ends here
     
-    script(type='text/javascript').
-      window.onload = function() {
-      document.getElementById("password1").onchange = validatePassword;
-      document.getElementById("password2").onchange = validatePassword;
-      }
-      function validatePassword() {
-      var pass2 = document.getElementById("password2").value;
-      var pass1 = document.getElementById("password1").value;
-      if (pass1 != pass2)
-      document.getElementById("password2").setCustomValidity("Passwords Don't Match");
-      else
-      document.getElementById("password2").setCustomValidity('');
-      //empty string means no validation error
-      }
+   
     // //popup signup form
     // js
     script(type='text/javascript', src='/javascripts/jquery-2.1.4.min.js')
@@ -431,16 +413,7 @@ html(lang='en')
       });
     // //Stats-Number-Scroller-Animation-JavaScript
     // FlexSlider
-    script(defer='', src='/javascripts/jquery.flexslider.js')
-    script(type='text/javascript').
-      $(window).load(function() {
-      $('.flexslider').flexslider({
-      animation: "pagination",
-      start: function(slider) {
-      $('body').removeClass('loading');
-      }
-      });
-      });
+  
     // End-slider-script
     // requried-jsfiles-for owl
     // testimonials
@@ -456,27 +429,18 @@ html(lang='en')
       pagination: false,
       dots: false
       });
+      $("#owl-demo-3").owlCarousel({
+      items: 4,
+      itemsDesktop: [1199, 3],
+      itemsDesktopSmall: [979, 3]
+      });
       });
     // //requried-jsfiles-for owl
     // //testimonials
     // start-smoth-scrolling
     script(src='/javascripts/SmoothScroll.min.js')
-    script(type='text/javascript', src='/javascripts	/easing.js')
+    script(type='text/javascript', src='/javascripts/easing.js')
     // here stars scrolling icon
-    script(type='text/javascript').
-      $(document).ready(function() {
-      /*
-      var defaults = {
-      containerID: 'toTop', // fading element id
-      containerHoverID: 'toTopHover', // fading element hover id
-      scrollSpeed: 1200,
-      easingType: 'linear'
-      };
-      */
-      $().UItoTop({
-      easingType: 'easeOutQuart'
-      });
-      });
     // //here ends scrolling icon
     // Scrolling Nav JavaScript
     script(src='/javascripts/scrolling-nav.js')
