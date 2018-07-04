@@ -2440,3 +2440,8 @@ input[type="Search"]::-webkit-input-placeholder {
 		visibility: hidden
 	}
 }
+
+testimonial-image-sizing{
+	height: 150px;
+	width: 150px
+}
