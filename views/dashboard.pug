@@ -11,7 +11,7 @@ html(lang="en")
         link(rel='stylesheet', href='/stylesheets/font-awesome.min.css')
   
 
-        title Document
+        title Dashboard
 
     body
       include header.pug
@@ -19,15 +19,15 @@ html(lang="en")
        .row
         .col-xs-1
         .col-xs-10
-          .panel.panel-info
-            .panel-heading
+          .panel.panel-info(style="border-color: grey")
+            .panel-heading(style="color: white;background: #33393d")
               .panel-title
                 .row
                   .col-xs-6
                     h5 Dashboard
                   .col-xs-6
                    a(href="/packageList")
-                    button.btn.btn-primary.btn-sm.btn-block(type='button')
+                    button.btn.btn-sm.btn-block(type='button' style="color: white;background: #9ca0a8")
                       span.glyphicon.glyphicon-share-alt
                       |  Continue exploring packages
 

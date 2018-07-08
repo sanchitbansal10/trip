@@ -4,9 +4,6 @@ var details = require('../models/packageDetails')
 
 var packageDetailsControl =function(req,res){
   let id = req.query.id;
-  console.log(typeof id)
-  id = Number(id)
-  console.log(typeof id)
   details.find({packageId:id},function(err,data){
     if(err){
       console.log('cant find')

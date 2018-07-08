@@ -67,13 +67,13 @@ html(lang='en')
                 li
                   if forHeader
                     .dropdown
-                        button.dropdown-toggle(type="button" style="margin:0px auto" data-toggle="dropdown") #{forHeader}
+                          button.btn.dropdown-toggle(type="button" style="margin-top:5px;color:black;background:#fefefe;border-radius: 5px;" data-toggle="dropdown") #{forHeader}
                             span.caret
-                        ul.dropdown-menu.list-group(style="margin-left:-20px,padding:0px")
-                            li.list-group-item(style="margin-left:0px")
-                                a(href='/users/dashboard' style="color:black") Dashboard
-                            li.list-group-item(style="margin-left:0px")
-                                a(href='/users/logout' style="color:black") Logout
+                          ul.dropdown-menu.list-group(style="margin-left:-20px;padding:0px")
+                            li.list-group-item(style="margin-left:0px;background:#33393d")
+                              a(href='/users/dashboard' style="color:white !important") Dashboard
+                            li.list-group-item(style="margin-left:0px;background:#33393d")
+                              a(href='/users/logout' style="color:white !important") Logout
                   else 
                     a.page-scroll.scroll(href='/users' style="border: 1px solid white") Login
             // /.navbar-collapse
@@ -187,18 +187,19 @@ html(lang='en')
     // //about-top
     .container
       .wthree_head_section
-        h3.title Featured Packages
+        h3(style="margin-top:40px").title Featured Packages
       #owl-demo-3.owl-carousel.package-carousel
         .package-custom
           img(src='images/check-for-package.jpg', alt='package1')
           .package-custom-show.package1
-            h4 Laddakh
+            h4 Jaipur
             h5 Rs 5000
           .package-custom-show-hover.package1
-            h4 Laddakh
+            h4 Jaipur
             h5 Rs 5000
-            h6.package-date 21 Jan-24 Jan 
-            h3 View
+            h6.package-date 01 Aug-05 Aug 
+            h3
+             a(style="color:black" href='/packageDetails?id=001') View
         .package-custom
           img(src='images/check-for-package.jpg', alt='package1')
           .package-custom-show.package1
@@ -351,48 +352,7 @@ html(lang='en')
                       p.para-w3-agile
                         | Always there to help you and to make your trips memorable.
     // //footer starts here
-    .footer-agile
-      .container
-        .footer-btm-agileinfo
-          .col-md-3.col-xs-3.w3social.footer-brand
-            h3 TRIPINLINE
-            div
-              a.social-button.twitter(href='#')
-                i.fa.fa-twitter
-              a.social-button.facebook(href='https://www.facebook.com/tripinline')
-                i.fa.fa-facebook
-              a.social-button.instagram(href='https://www.instagram.com/tripinline')
-                i.fa.fa-instagram
-          .col-md-3.col-xs-3.footer-grid.w3social
-            h3 Know us better
-            ul
-              li
-                a(href='index.html') Work with us
-              li
-                a.scroll(href='#about') About us
-          .col-md-3.col-xs-3.footer-grid
-            h3 Contact Info
-            ul
-              li
-                i.fa.fa-map-marker
-                | 5544, Modern Housing Complex, Mani Majra, Chandigarh
-          .col-md-3.col-xs-3.footer-grid
-            h3 Queries
-            ul
-              li
-                | tripinline@gmail.com
-          .clearfix  
-        .footer-agilem
-          .col-sm-4.col-xs-3.col-md-3
-            | All Rights Reserved 
-            i.fa.fa-copyright
-            |  2018
-          .col-md-5
-          .col-md-4.terms-footer
-            p
-              | Terms And Condition
-              span Privacy Policy
-          .clearfix
+    include footer.pug  
     // footer ends here
     script(type='text/javascript', src='/javascripts/jquery-2.1.4.min.js')
     script(src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js')

@@ -26,12 +26,12 @@
             li
               if forHeader
                 .dropdown
-                  button.dropdown-toggle(type="button" style="margin-top:5px" data-toggle="dropdown") #{forHeader}
+                  button.btn.dropdown-toggle(type="button" style="margin-top:5px;color:black;background:#fefefe;border-radius: 5px;" data-toggle="dropdown") #{forHeader}
                     span.caret
-                  ul.dropdown-menu.list-group(style="margin-left:-20px")
-                    li.list-group-item(style="margin-left:0px")
-                      a(href='/users/dashboard') Dashboard
-                    li.list-group-item(style="margin-left:0px")
-                      a(href='/users/logout') Logout
+                  ul.dropdown-menu.list-group(style="margin-left:-20px;padding:0px")
+                    li.list-group-item(style="margin-left:0px;background:#33393d")
+                      a(href='/users/dashboard' style="color:white !important") Dashboard
+                    li.list-group-item(style="margin-left:0px;background:#33393d")
+                      a(href='/users/logout' style="color:white !important") Logout
               else 
                 a.page-scroll.scroll(href='/users') Login
